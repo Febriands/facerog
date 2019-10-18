@@ -27,7 +27,7 @@ class Movie_MP4(VideoPlay):
   type = "MP4"
 
 def imagerog(request):
-  img = Image.open('febrian.jpg')
+  img = Image.open(BASE_DIR+"/febrian.jpg")
   img.show() 
   return render(request, "index.html")
 
@@ -38,7 +38,7 @@ def facerog(request):
     video_capture = cv2.VideoCapture(0)
 
     # Load a sample picture and learn how to recognize it.
-    febrian_image = face_recognition.load_image_file(BASE_DIR+"febrian.jpg")
+    febrian_image = face_recognition.load_image_file(BASE_DIR+"/febrian.jpg")
     febrian_face_encoding = face_recognition.face_encodings(febrian_image)[0]
 
     # Load a second sample picture and learn how to recognize it.
