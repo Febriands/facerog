@@ -27,8 +27,7 @@ SECRET_KEY = '2%63fz$2z@w&bp(a911v8b!gr1tv9d#u3tf0o^s7fzu54=n(_('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['35.186.158.165','facerog.febriands.com','www.facerog.febriands.com','127.0.0.1']
 
 # Application definition
 
