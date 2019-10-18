@@ -7,6 +7,11 @@ import numpy as np
 import time
 from playsound import playsound
 
+from PIL import Image                                                                                
+
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 def index(request):
   return render(request, "index.html")
 
@@ -21,6 +26,11 @@ class VideoPlay(object):
 class Movie_MP4(VideoPlay):
   type = "MP4"
 
+def imagerog(request):
+  img = Image.open('febrian.jpg')
+  img.show() 
+  return render(request, "index.html")
+
 def facerog(request):
   name=""
   if request.POST:
@@ -28,7 +38,7 @@ def facerog(request):
     video_capture = cv2.VideoCapture(0)
 
     # Load a sample picture and learn how to recognize it.
-    febrian_image = face_recognition.load_image_file("febrian.jpg")
+    febrian_image = face_recognition.load_image_file(BASE_DIR+"febrian.jpg")
     febrian_face_encoding = face_recognition.face_encodings(febrian_image)[0]
 
     # Load a second sample picture and learn how to recognize it.
