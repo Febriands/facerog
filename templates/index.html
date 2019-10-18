@@ -11,5 +11,10 @@
       {% csrf_token %}
       <button type="submit">Press Me!</button>
     </form>
+    <br>
+    <form action="{% url "imagerog" %}" method="post">
+      {% csrf_token %}
+      <button type="submit">Press Me! 2</button>
+    </form>
 </body>
 </html>
