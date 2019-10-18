@@ -1,3 +1,4 @@
 .vscode/*
 myvenv/*
 **/__pycache__/*
+*.pyc
